@@ -13,19 +13,19 @@
         public double DebitLimit { get; set; }
         public Transactions[] Transactions { get; set; }
 
-        public void Withdraw()
+        public void Withdraw(double withdraw)
         {
-
+            
         }
 
-        public void Deposit()
+        public void Deposit(double deposit)
         {
-
+            Balance += deposit;
         }
 
-        public void TransfereTo()
+        public void TransfereTo(CheckingAccount account, double transference)
         {
-
+            account.Balance += transference;
         }
 
         public void ShowStatement()
