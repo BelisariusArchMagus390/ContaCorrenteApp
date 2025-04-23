@@ -5,7 +5,7 @@
     {
         static void Main(string[] args)
         {
-            
+            CheckingAccount lol = new CheckingAccount();
         }
     }
 }
