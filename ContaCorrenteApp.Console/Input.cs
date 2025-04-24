@@ -8,6 +8,12 @@
 
     internal class Input
     {
-
+        public void showErrorMessage(string message)
+        {
+            Console.Clear();
+            Console.WriteLine($"\n Erro! {message}");
+            Console.WriteLine(" Aperte ENTER para continuar...");
+            Console.ReadLine();
+        }
     }
 }

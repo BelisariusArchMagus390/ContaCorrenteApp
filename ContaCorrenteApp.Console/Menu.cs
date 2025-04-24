@@ -9,14 +9,6 @@
 
     internal class Menu
     {
-        public void showErrorMessage(string message)
-        {
-            Console.Clear();
-            Console.WriteLine($"\n Erro! {message}");
-            Console.WriteLine(" Aperte ENTER para continuar...");
-            Console.ReadLine();
-        }
-
         public void showMenuManagementAccounts()
         {
             Console.WriteLine("\n ---------------------------------------");

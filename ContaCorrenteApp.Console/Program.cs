@@ -5,6 +5,7 @@
     {
         static CheckingAccount account = new CheckingAccount();
         static Menu menu = new Menu();
+        static Input input = new Input();
         static Dictionary<string, CheckingAccount> accountList = new Dictionary<string, CheckingAccount>();
         static void Main(string[] args)
         {
@@ -29,7 +30,7 @@
                         break;
 
                     default:
-                        menu.showErrorMessage(" Essa opção não existe.");
+                        input.showErrorMessage(" Essa opção não existe.");
                         break;
                 }   
             }
