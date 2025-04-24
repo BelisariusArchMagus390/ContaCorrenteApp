@@ -68,10 +68,38 @@
             Console.WriteLine("\n ------------------------------");
         }
 
-
-        public void ShowStatement()
+        // Mostra o extrato
+        public void showStatement()
         {
-            
+            // Mostra os débitos
+            Console.WriteLine("\n ---------------------------------------");
+            Console.WriteLine(" DÉBITOS");
+            Console.WriteLine("\n ---------------------------------------");
+
+            foreach (Transactions t in Transaction)
+            {
+                if (t.Transaction < 0)
+                {
+                    Console.WriteLine($" {t.Date} {t.Time}: {t.Transaction}");
+                } 
+            }
+
+            Console.WriteLine("\n ---------------------------------------");
+
+            // Mostra entrada de crédito
+            Console.WriteLine("\n ---------------------------------------");
+            Console.WriteLine(" ENTRADA DE CRÉDITO");
+            Console.WriteLine("\n ---------------------------------------");
+
+            foreach (Transactions t in Transaction)
+            {
+                if (t.Transaction > 0)
+                {
+                    Console.WriteLine($" {t.Date} {t.Time}: {t.Transaction}");
+                }
+            }
+
+            Console.WriteLine("\n ---------------------------------------");
         }
     }
 }
