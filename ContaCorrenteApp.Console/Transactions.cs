@@ -8,6 +8,6 @@
 
     internal class Transactions
     {
-        
+        public double Transaction { get; set; }
     }
 }

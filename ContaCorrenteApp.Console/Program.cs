@@ -5,7 +5,9 @@
     {
         static void Main(string[] args)
         {
-            CheckingAccount lol = new CheckingAccount();
+            //CheckingAccount account1 = new CheckingAccount();
+
+            
         }
     }
 }
