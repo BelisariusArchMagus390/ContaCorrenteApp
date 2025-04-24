@@ -6,8 +6,6 @@
         static void Main(string[] args)
         {
             //CheckingAccount account1 = new CheckingAccount();
-
-            
         }
     }
 }

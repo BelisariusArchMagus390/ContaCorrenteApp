@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using static System.Runtime.InteropServices.JavaScript.JSType;
 
     internal class CheckingAccount
     {
@@ -33,6 +34,8 @@
                 Balance -= withdraw;
 
                 t.Transaction = -withdraw;
+                t.Date = DateTime.Now.ToString("dd/MM/yyyy");
+                t.Time = DateTime.Now.ToString("HH:mm:ss tt");
                 Transaction.Add(t);
             }
         }
@@ -42,6 +45,8 @@
             Balance += deposit;
 
             t.Transaction = deposit;
+            t.Date = DateTime.Now.ToString("dd/MM/yyyy");
+            t.Time = DateTime.Now.ToString("HH:mm:ss tt");
             Transaction.Add(t);
         }
 
@@ -50,7 +55,9 @@
             account.Balance += transference;
             Balance -= transference;
 
-            t.Transaction = transference;
+            t.Transaction = -transference;
+            t.Date = DateTime.Now.ToString("dd/MM/yyyy");
+            t.Time = DateTime.Now.ToString("HH:mm:ss tt");
             Transaction.Add(t);
         }
 
@@ -60,6 +67,7 @@
             Console.WriteLine($"\n Saldo em conta: {Balance}");
             Console.WriteLine("\n ------------------------------");
         }
+
 
         public void ShowStatement()
         {
