@@ -9,6 +9,7 @@
 
     internal class CheckingAccount
     {
+        public string UserName { get; set; }
         public double Balance { get; set; }
         public int IdAccount { get; set; }
         public double DebitLimit { get; set; }

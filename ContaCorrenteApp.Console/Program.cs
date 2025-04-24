@@ -3,9 +3,38 @@
     using System;
     internal class Program
     {
+        static CheckingAccount account = new CheckingAccount();
+        static Menu menu = new Menu();
+        static Dictionary<string, CheckingAccount> accountList = new Dictionary<string, CheckingAccount>();
         static void Main(string[] args)
         {
-            //CheckingAccount account1 = new CheckingAccount();
+            bool ifExit = false;
+            while(ifExit == false)
+            {
+                menu.showMenuManagementAccounts();
+                char option = Console.ReadLine()[0];
+
+                switch (option)
+                {
+                    case '1':
+                        
+                        break;
+
+                    case '2':
+
+                        break;
+
+                    case '3':
+                        ifExit = true;
+                        break;
+
+                    default:
+                        menu.showErrorMessage(" Essa opção não existe.");
+                        break;
+                }   
+            }
         }
+
+        
     }
 }
