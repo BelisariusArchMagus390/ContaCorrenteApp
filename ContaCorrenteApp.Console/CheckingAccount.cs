@@ -13,11 +13,12 @@
         public double Balance { get; set; }
         public int IdAccount { get; set; }
         public double DebitLimit { get; set; }
-        static public List<Transactions> TransactionList { get; set; }
+        public List<Transactions> TransactionList { get; set; }
+        private Input input = new Input();
 
         public CheckingAccount()
         {
-            List<Transactions> TransactionList = new List<Transactions>();
+            TransactionList = new List<Transactions>();
         }
 
         // saque da conta
@@ -33,6 +34,8 @@
                 t.Time = DateTime.Now.ToString("HH:mm:ss tt");
                 TransactionList.Add(t);
             }
+            else
+                input.showErrorMessage("Limite insuficiente.");
         }
 
         // depósito da conta
@@ -73,8 +76,8 @@
         {
             // mostra os débitos
             Console.WriteLine("\n ---------------------------------------");
-            Console.WriteLine(" DÉBITOS");
-            Console.WriteLine("\n ---------------------------------------");
+            Console.WriteLine("\n DÉBITOS");
+            Console.WriteLine("\n ---------------------------------------\n");
 
             foreach (Transactions t in TransactionList)
             {
@@ -88,8 +91,8 @@
 
             // mostra entrada de crédito
             Console.WriteLine("\n ---------------------------------------");
-            Console.WriteLine(" ENTRADA DE CRÉDITO");
-            Console.WriteLine("\n ---------------------------------------");
+            Console.WriteLine("\n ENTRADA DE CRÉDITO");
+            Console.WriteLine("\n ---------------------------------------\n");
 
             foreach (Transactions t in TransactionList)
             {
