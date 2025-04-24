@@ -20,21 +20,10 @@
             List<Transactions> TransactionList = new List<Transactions>();
         }
 
-        private double sumDebit()
-        {
-            double result = 0;
-
-            foreach (Transactions t in TransactionList)
-            {
-                if (t.Transaction < 0)
-                    result += Math.Abs(t.Transaction);
-            }
-            return result;
-        }
-
+        // saque da conta
         public void withdraw(double withdraw)
         {
-            if (DebitLimit == 0 || sumDebit() < DebitLimit)
+            if (DebitLimit == 0 || withdraw <= DebitLimit)
             {
                 Transactions t = new Transactions();
                 Balance -= withdraw;
@@ -46,6 +35,7 @@
             }
         }
 
+        // depósito da conta
         public void deposit(double deposit)
         {
             Transactions t = new Transactions();
@@ -57,6 +47,7 @@
             TransactionList.Add(t);
         }
 
+        // transferência entre conta
         public void transfereTo(CheckingAccount account, double transference)
         {
             Transactions t = new Transactions();
@@ -69,6 +60,7 @@
             TransactionList.Add(t);
         }
 
+        // mostra o saldo
         public void showBalance()
         {
             Console.WriteLine(" \n------------------------------");
@@ -76,10 +68,10 @@
             Console.WriteLine("\n ------------------------------");
         }
 
-        // Mostra o extrato
+        // mostra o extrato
         public void showStatement()
         {
-            // Mostra os débitos
+            // mostra os débitos
             Console.WriteLine("\n ---------------------------------------");
             Console.WriteLine(" DÉBITOS");
             Console.WriteLine("\n ---------------------------------------");
@@ -94,7 +86,7 @@
 
             Console.WriteLine("\n ---------------------------------------");
 
-            // Mostra entrada de crédito
+            // mostra entrada de crédito
             Console.WriteLine("\n ---------------------------------------");
             Console.WriteLine(" ENTRADA DE CRÉDITO");
             Console.WriteLine("\n ---------------------------------------");

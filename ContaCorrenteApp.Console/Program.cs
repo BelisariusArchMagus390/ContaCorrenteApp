@@ -43,6 +43,7 @@
             }
         }
 
+        // criação de id que não repete
         static int createIdAccount()
         {
             Random randomId = new Random();
@@ -65,6 +66,7 @@
             return id;
         }
 
+        // criação de conta de usuário
         static void createAccount()
         {
             CheckingAccount account = new CheckingAccount();
@@ -89,6 +91,7 @@
             Console.ReadLine();
         }
 
+        // mostra a lista de contas criadas
         static void listCreatedAccounts()
         {
             Console.Clear();
@@ -107,6 +110,7 @@
             Console.ReadLine();
         }
 
+        // entra na conta do usuário
         static void enterAccount()
         {
             while (true)
@@ -122,6 +126,7 @@
             }
         }
 
+        // encontra a conta do usuário por id
         static CheckingAccount findAccount(CheckingAccount tranferenceAccount)
         {
             while (true)
@@ -141,6 +146,7 @@
             return tranferenceAccount;
         }
 
+        // operações que podem ser feita na conta do usuário
         static void operationsAccount()
         {
             bool ifExit = false;
