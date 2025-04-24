@@ -15,5 +15,39 @@
             Console.WriteLine(" Aperte ENTER para continuar...");
             Console.ReadLine();
         }
+
+        public double verifyDoubleValue(string message)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.Write(message);
+                string value = Console.ReadLine();
+
+                if (double.TryParse(value, out double doubleValue))
+                {
+                    return doubleValue;
+                }
+                else
+                    showErrorMessage(" Esse não é um valor numérico.");
+            }
+        }
+
+        public int verifyIntValue(string message)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.Write(message);
+                string value = Console.ReadLine();
+
+                if (int.TryParse(value, out int intValue))
+                {
+                    return intValue;
+                }
+                else
+                    showErrorMessage(" Esse não é um valor numérico inteiro.");
+            }
+        }
     }
 }

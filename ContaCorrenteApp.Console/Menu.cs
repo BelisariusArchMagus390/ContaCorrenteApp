@@ -12,13 +12,14 @@
         public void showMenuManagementAccounts()
         {
             Console.WriteLine("\n ---------------------------------------");
-            Console.WriteLine(" GESTÃO DE CONTA CORRENTE");
+            Console.WriteLine("\n GESTÃO DE CONTA CORRENTE");
             Console.WriteLine("\n ---------------------------------------");
 
-            Console.WriteLine(" 1 - Criar nova conta corrente");
+            Console.WriteLine("\n 1 - Criar nova conta corrente");
             Console.WriteLine(" 2 - Entrar em conta corrente");
-            Console.WriteLine(" 3 - Sair");
-            Console.WriteLine("\n Escolha uma das opções acima: ");
+            Console.WriteLine(" 3 - Listar contas criadas");
+            Console.WriteLine(" 4 - Sair");
+            Console.Write("\n Escolha uma das opções acima: ");
         }
 
         public void showMenuAccount(CheckingAccount account)
@@ -26,17 +27,17 @@
             string userName = account.UserName.ToUpper();
 
             Console.WriteLine("\n ---------------------------------------");
-            Console.WriteLine($" CONTA CORRENTE DE {userName}");
+            Console.WriteLine($"\n CONTA CORRENTE DE {userName}");
             Console.WriteLine($" ID: {account.IdAccount}");
             Console.WriteLine("\n ---------------------------------------");
 
-            Console.WriteLine(" 1 - Saque");
+            Console.WriteLine("\n 1 - Saque");
             Console.WriteLine(" 2 - Depósito");
             Console.WriteLine(" 3 - Consulta de saldo");
             Console.WriteLine(" 4 - Emissão de extrato");
             Console.WriteLine(" 5 - Transferência");
             Console.WriteLine(" 6 - Sair");
-            Console.WriteLine("\n Escolha uma das opções acima: ");
+            Console.Write("\n Escolha uma das opções acima: ");
         }
     }
 }
